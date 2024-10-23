@@ -1,0 +1,32 @@
+ALGORITHM chaine_de_caractére
+VAR
+longueur: INTEGER:=0
+nombre_de_mots: INTEGER:=0
+nombre_de_voyelles: INTEGER:=0
+ch: STRING
+voyelle : ARRAY_OF char[12];
+voyelle:=['a','e','o','i','y','u','A','E','U','O','I','Y']
+BEGIN
+write("une phrase terminant par un point")
+read (ch)
+FOR i FROM 1 TO (longueur-1) step  DO
+    IF (ch[i]<>'.') THEN
+        longueur:=longueur+1
+    END_IF
+END_FOR
+read(longueur)
+FOR i FROM 1 TO longueur step  DO
+    IF (ch[i]=' ') THEN
+        nombre_de_mots:=nombre_de_mots+1
+    END_IF
+END_FOR
+    read(nombre_de_mots)
+    FOR i FROM 1 TO longueur  step  DO
+    FOR j FROM 1 TO 12 step  DO
+        WHILE (ch[i]=voyelle[j]) DO
+            nombre_de_voyelles:=nombre_de_voyelles+1
+        END_WHILE
+    END_FOR
+    END_FOR
+
+END
